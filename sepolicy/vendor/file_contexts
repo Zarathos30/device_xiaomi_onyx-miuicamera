@@ -1,0 +1,2 @@
+/sys/devices/platform/soc/[0-9a-f]+.qcom,camera(/.*)?     u:object_r:sysfs_camera:s0
+/sys/class/camera(/.*)?                                   u:object_r:sysfs_camera:s0

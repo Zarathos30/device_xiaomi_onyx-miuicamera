@@ -18,3 +18,5 @@ allow platform_app app_data_file:file execute;
 get_prop(platform_app, vendor_camera_sensor_prop)
 get_prop(platform_app, vendor_display_prop)
 get_prop(platform_app, vendor_panel_info_prop)
+
+allow platform_app vendor_audio_prop:file { open read getattr map };

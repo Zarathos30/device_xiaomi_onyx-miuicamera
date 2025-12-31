@@ -8,7 +8,7 @@
 $(call soong_config_set_bool,camera,override_format_from_reserved,true)
 
 # Inherit from the proprietary version
-$(call inherit-product, vendor/xiaomi/peridot-miuicamera/peridot-miuicamera-vendor.mk)
+$(call inherit-product, vendor/xiaomi/onyx-miuicamera/onyx-miuicamera-vendor.mk)
 
 # Miuicamera
 PRODUCT_PACKAGES += \

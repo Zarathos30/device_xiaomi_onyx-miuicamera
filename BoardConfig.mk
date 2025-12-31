@@ -4,10 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-MIUICAMERA_PATH := device/xiaomi/peridot-miuicamera
+MIUICAMERA_PATH := device/xiaomi/onyx-miuicamera
 
 # Inherit from the proprietary version
-include vendor/xiaomi/peridot-miuicamera/BoardConfigVendor.mk
+include vendor/xiaomi/onyx-miuicamera/BoardConfigVendor.mk
 
 # MiuiCamera
 CAMERA_PACKAGE_NAME := com.android.camera

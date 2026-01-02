@@ -33,14 +33,13 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'system/lib64/libgui-xiaomi.so': blob_fixup()
         .fix_soname()
-        .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+        .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V6-ndk.so'),
     (
         'system/lib64/libcamera_algoup_jni.xiaomi.so',
         'system/lib64/libcamera_mianode_jni.xiaomi.so',
     ): blob_fixup()
         .replace_needed('libgui.so', 'libgui-xiaomi.so'),
-    'system/priv-app/MiuiCamera/MiuiCamera.apk': blob_fixup()
-        .apktool_patch('patches'),
+    'system/priv-app/MiuiCamera/MiuiCamera.apk': blob_fixup(),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

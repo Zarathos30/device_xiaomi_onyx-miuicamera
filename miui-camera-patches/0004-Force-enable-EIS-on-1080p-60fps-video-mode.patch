@@ -1,0 +1,124 @@
+diff --git a/smali/b1/a.smali b/smali/b1/a.smali
+index a78b43f6..98462ec6 100644
+--- a/smali/b1/a.smali
++++ b/smali/b1/a.smali
+@@ -394,7 +394,7 @@
+     goto :goto_3
+ 
+     :cond_10
+-    const v3, 0x803c
++    const v3, 0x8004
+ 
+     goto :goto_3
+ 
+diff --git a/smali_classes2/w5/d.smali b/smali_classes2/w5/d.smali
+index 2e9ed5e4..5608b01c 100644
+--- a/smali_classes2/w5/d.smali
++++ b/smali_classes2/w5/d.smali
+@@ -14753,105 +14753,9 @@
+         type = 0x2
+     .end annotation
+ 
+-    const/4 v0, 0x6
+-
+-    const/4 v1, 0x0
+-
+-    if-ne p0, v0, :cond_3
+-
+-    if-eqz p1, :cond_3
+-
+-    iget-object p0, p1, Lw5/c;->x1:Ljava/lang/Boolean;
+-
+     const/4 v0, 0x1
+ 
+-    if-nez p0, :cond_2
+-
+-    sget-object p0, LK5/l;->X:LK5/N;
+-
+-    invoke-virtual {p0}, LK5/N;->b()Ljava/lang/String;
+-
+-    move-result-object v2
+-
+-    invoke-virtual {p1, v2}, Lw5/c;->B0(Ljava/lang/String;)Z
+-
+-    move-result v2
+-
+-    if-eqz v2, :cond_1
+-
+-    const v2, 0xdead
+-
+-    iget-object v3, p1, Lw5/c;->c:Landroid/hardware/camera2/CameraCharacteristics;
+-
+-    invoke-static {v3, p0, v2}, LK5/O;->e(Landroid/hardware/camera2/CameraCharacteristics;LK5/N;I)Ljava/lang/Object;
+-
+-    move-result-object p0
+-
+-    check-cast p0, Ljava/lang/Byte;
+-
+-    if-eqz p0, :cond_0
+-
+-    invoke-virtual {p0}, Ljava/lang/Byte;->byteValue()B
+-
+-    move-result p0
+-
+-    if-ne p0, v0, :cond_0
+-
+-    move p0, v0
+-
+-    goto :goto_0
+-
+-    :cond_0
+-    move p0, v1
+-
+-    :goto_0
+-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+-
+-    move-result-object p0
+-
+-    iput-object p0, p1, Lw5/c;->x1:Ljava/lang/Boolean;
+-
+-    goto :goto_1
+-
+-    :cond_1
+-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+-
+-    iput-object p0, p1, Lw5/c;->x1:Ljava/lang/Boolean;
+-
+-    :goto_1
+-    new-instance p0, Ljava/lang/StringBuilder;
+-
+-    const-string v2, "is1080p60FpsEISSupported: "
+-
+-    invoke-direct {p0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+-
+-    iget-object v2, p1, Lw5/c;->x1:Ljava/lang/Boolean;
+-
+-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+-
+-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+-
+-    move-result-object p0
+-
+-    new-array v2, v1, [Ljava/lang/Object;
+-
+-    const-string v3, "CameraCapabilities"
+-
+-    invoke-static {v3, p0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+-
+-    :cond_2
+-    iget-object p0, p1, Lw5/c;->x1:Ljava/lang/Boolean;
+-
+-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+-
+-    move-result p0
+-
+-    if-eqz p0, :cond_3
+-
+-    move v1, v0
+-
+-    :cond_3
+-    return v1
++    return v0
+ .end method
+ 
+ .method public static m1(Lw5/c;)Z

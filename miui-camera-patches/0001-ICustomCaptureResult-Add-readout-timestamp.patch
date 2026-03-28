@@ -1,0 +1,58 @@
+diff --git a/smali_classes6/com/xiaomi/protocol/ICustomCaptureResult.smali b/smali_classes6/com/xiaomi/protocol/ICustomCaptureResult.smali
+index a22b42b4..985f620a 100644
+--- a/smali_classes6/com/xiaomi/protocol/ICustomCaptureResult.smali
++++ b/smali_classes6/com/xiaomi/protocol/ICustomCaptureResult.smali
+@@ -314,7 +314,7 @@
+ .end method
+ 
+ .method public static toTotalCaptureResult(Lcom/xiaomi/protocol/ICustomCaptureResult;IZ)Landroid/hardware/camera2/TotalCaptureResult;
+-    .locals 19
++    .locals 21
+ 
+     .line 2
+     const-string v0, "|"
+@@ -401,7 +401,11 @@
+ 
+     move-object/from16 v16, v17
+ 
+-    filled-new-array/range {v7 .. v17}, [Ljava/lang/Class;
++    sget-object v18, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
++
++    sget-object v19, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
++
++    filled-new-array/range {v7 .. v19}, [Ljava/lang/Class;
+ 
+     move-result-object v7
+ 
+@@ -456,7 +460,15 @@
+ 
+     const/4 v15, 0x0
+ 
+-    filled-new-array/range {v8 .. v18}, [Ljava/lang/Object;
++    invoke-static {v15}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
++
++    move-result-object v19
++
++
++    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
++
++    move-result-object v20
++    filled-new-array/range {v8 .. v20}, [Ljava/lang/Object;
+ 
+     move-result-object v8
+ 
+@@ -539,6 +551,14 @@
+ 
+     const/4 v15, 0x0
+ 
++    invoke-static {v15}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
++
++    move-result-object v19
++
++
++    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
++
++    move-result-object v20
+     filled-new-array/range {v8 .. v15}, [Ljava/lang/Object;
+ 
+     move-result-object v0

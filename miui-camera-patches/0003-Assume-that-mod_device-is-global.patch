@@ -1,0 +1,13 @@
+diff --git a/smali_classes6/sh/a.smali b/smali_classes6/sh/a.smali
+index 09547519..b097df82 100644
+--- a/smali_classes6/sh/a.smali
++++ b/smali_classes6/sh/a.smali
+@@ -39,7 +39,7 @@
+ 
+     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+ 
+-    move-result v0
++    const/4 v0, 0x1
+ 
+     sput-boolean v0, Lsh/a;->a:Z
+ 

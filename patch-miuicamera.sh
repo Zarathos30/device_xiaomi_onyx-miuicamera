@@ -8,7 +8,7 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PATCHES_DIR="$SCRIPT_DIR/miui-camera-patches"
-TOP_DIR="$(pwd)"
+TOP_DIR="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 VENDOR_APK="$TOP_DIR/vendor/xiaomi/onyx-miuicamera/proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk"
 WORK_DIR="/tmp/miuicamera-patch-$$"
 

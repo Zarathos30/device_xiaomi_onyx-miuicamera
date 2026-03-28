@@ -1,20 +1,23 @@
 diff --git a/smali/com/android/camera/Camera.smali b/smali/com/android/camera/Camera.smali
-index ae675d04..e66bc7f6 100644
+index 66b51c6f..1e7307cd 100644
 --- a/smali/com/android/camera/Camera.smali
 +++ b/smali/com/android/camera/Camera.smali
-@@ -4571,7 +4571,7 @@
+@@ -17645,9 +17645,9 @@
  
      invoke-direct {p0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
  
 -    const-string p1, "com.miui.gallery"
 +    const-string p1, "android.intent.category.APP_GALLERY"
  
-     invoke-virtual {p0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+-    invoke-virtual {p0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
++    invoke-virtual {p0, p1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
  
-diff --git a/smali/z/o0.smali b/smali/z/o0.smali
-index 1c277423..6d2016bf 100644
---- a/smali/z/o0.smali
-+++ b/smali/z/o0.smali
+     invoke-virtual {v0, p0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+ 
+diff --git a/smali/z/p4.smali b/smali/z/p4.smali
+index 4b119abf..c6c31f08 100644
+--- a/smali/z/p4.smali
++++ b/smali/z/p4.smali
 @@ -87,7 +87,7 @@
  
      const/4 v4, 0x0

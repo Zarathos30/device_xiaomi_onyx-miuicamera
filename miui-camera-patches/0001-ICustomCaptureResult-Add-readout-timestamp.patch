@@ -1,58 +1,62 @@
-diff --git a/smali_classes6/com/xiaomi/protocol/ICustomCaptureResult.smali b/smali_classes6/com/xiaomi/protocol/ICustomCaptureResult.smali
-index a22b42b4..985f620a 100644
---- a/smali_classes6/com/xiaomi/protocol/ICustomCaptureResult.smali
-+++ b/smali_classes6/com/xiaomi/protocol/ICustomCaptureResult.smali
-@@ -314,7 +314,7 @@
+diff --git a/smali_classes4/com/xiaomi/protocol/ICustomCaptureResult.smali b/smali_classes4/com/xiaomi/protocol/ICustomCaptureResult.smali
+index 48dad750..1b83f321 100644
+--- a/smali_classes4/com/xiaomi/protocol/ICustomCaptureResult.smali
++++ b/smali_classes4/com/xiaomi/protocol/ICustomCaptureResult.smali
+@@ -322,7 +322,7 @@
  .end method
  
  .method public static toTotalCaptureResult(Lcom/xiaomi/protocol/ICustomCaptureResult;IZ)Landroid/hardware/camera2/TotalCaptureResult;
--    .locals 19
-+    .locals 21
+-    .locals 22
++    .locals 23
  
-     .line 2
      const-string v0, "|"
-@@ -401,7 +401,11 @@
  
-     move-object/from16 v16, v17
+@@ -406,7 +406,7 @@
  
--    filled-new-array/range {v7 .. v17}, [Ljava/lang/Class;
-+    sget-object v18, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+     if-lt v0, v7, :cond_0
+ 
+-    const/16 v0, 0xb
++    const/16 v0, 0xd
+ 
+     :try_start_1
+     new-array v7, v0, [Ljava/lang/Class;
+@@ -442,6 +442,16 @@
+ 
+     aput-object v19, v7, v20
+ 
++    const/16 v22, 0xb
 +
-+    sget-object v19, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
++    sget-object v21, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 +
-+    filled-new-array/range {v7 .. v19}, [Ljava/lang/Class;
- 
-     move-result-object v7
- 
-@@ -456,7 +460,15 @@
- 
-     const/4 v15, 0x0
- 
--    filled-new-array/range {v8 .. v18}, [Ljava/lang/Object;
-+    invoke-static {v15}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
++    aput-object v21, v7, v22
 +
-+    move-result-object v19
++    const/16 v22, 0xc
 +
++    aput-object v19, v7, v22
 +
-+    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-+
-+    move-result-object v20
-+    filled-new-array/range {v8 .. v20}, [Ljava/lang/Object;
+     .line 8
+     invoke-virtual {v6, v7}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
  
-     move-result-object v8
+@@ -517,6 +527,22 @@
  
-@@ -539,6 +551,14 @@
+     aput-object v18, v0, v20
  
-     const/4 v15, 0x0
++    const/16 v22, 0xb
++
++    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
++
++    move-result-object v21
++
++    aput-object v21, v0, v22
++
++    const/16 v22, 0xc
++
++    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
++
++    move-result-object v21
++
++    aput-object v21, v0, v22
++
+     .line 11
+     invoke-virtual {v7, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
  
-+    invoke-static {v15}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-+
-+    move-result-object v19
-+
-+
-+    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-+
-+    move-result-object v20
-     filled-new-array/range {v8 .. v15}, [Ljava/lang/Object;
- 
-     move-result-object v0

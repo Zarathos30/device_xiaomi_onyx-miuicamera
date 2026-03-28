@@ -36,10 +36,7 @@ echo "==> Applying patches..."
 FAILED=0
 for patch in "$PATCHES_DIR"/*.patch; do
     PATCH_NAME="$(basename "$patch")"
-    if git apply --check --ignore-whitespace "$patch" 2>/dev/null; then
-        git apply --ignore-whitespace "$patch"
-        echo "  [OK] $PATCH_NAME"
-    elif git apply --check "$patch" 2>/dev/null; then
+    if git apply --check "$patch" 2>/dev/null; then
         git apply "$patch"
         echo "  [OK] $PATCH_NAME"
     else

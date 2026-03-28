@@ -1,15 +1,15 @@
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index 680ec7e3..31f871b6 100644
+index 10716d30..8c0f9ef9 100644
 --- a/AndroidManifest.xml
 +++ b/AndroidManifest.xml
-@@ -104,7 +104,7 @@
-     <uses-permission android:name="com.android.camera.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+@@ -111,7 +111,7 @@
      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
--    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@mipmap/f6h" android:label="@string/fsb" android:largeHeap="true" android:name="com.android.camera.CameraAppImpl" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@style/iys">
-+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_camera" android:label="@string/fsb" android:largeHeap="true" android:name="com.android.camera.CameraAppImpl" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@style/iys">
-         <meta-data android:name="miui_keyguard_shortcuts" android:resource="@xml/jht"/>
-         <meta-data android:name="required_permissions" android:value="@string/hs_"/>
+     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+-    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@mipmap/edi" android:label="@string/evy" android:largeHeap="true" android:name="com.android.camera.CameraAppImpl" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@style/h4i">
++    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_camera" android:label="@string/evy" android:largeHeap="true" android:name="com.android.camera.CameraAppImpl" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@style/h4i">
+         <meta-data android:name="miui_keyguard_shortcuts" android:resource="@xml/hik"/>
+         <meta-data android:name="required_permissions" android:value="@string/g_x"/>
          <meta-data android:name="miui.supportRequiredModifiable" android:value="true"/>
 diff --git a/res/mipmap-xhdpi/ic_launcher_camera.png b/res/mipmap-xhdpi/ic_launcher_camera.png
 new file mode 100644
